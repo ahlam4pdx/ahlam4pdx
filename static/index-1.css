@@ -47,6 +47,65 @@ header li a:hover {
   border-radius: 0.15em 0;
 }
 
+/** RESPONSIVE navbar **/
+.dropdown-toggle {
+  display: none;
+}
+
+@media screen and (max-width: 1100px) {
+  /* Hide the dropdown content by default */
+  .nav-list {
+    display: none;
+    position: absolute; /* Positioning outside of normal document flow */
+    background-color: #444e5d;
+    /*box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);*/
+    z-index: 1; /* Ensure dropdown is on top of other content */
+    right: 0;
+  }
+
+  /* Styling for the dropdown button */
+  .dropdown-toggle {
+    cursor: pointer;
+    display: block; /* Show as a block to take up full width */
+  }
+
+  /* Display the dropdown menu on click */
+  nav .active {
+    display: block;
+  }
+
+  /* Adjustments for mobile screens */
+  nav {
+    display: block;
+  }
+
+  .nav-list.active {
+    display: block; /* Show the navbar when active */
+    flex-direction: column;
+  }
+
+  .nav-list li {
+    margin: 10px 0; /* Space out the nav items */
+    width: 150px;
+    border-bottom: 2px solid #ffffff;
+    padding: 10px;
+    padding-bottom: 15px;
+  }
+
+  .nav-list li:last-child {
+    border-bottom: 0;
+    margin-bottom: 5px;
+  }
+
+  .nav-list {
+    text-align: center;
+  }
+
+  .nav-list a {
+    color: #ffffff;
+  }
+}
+
 /********************* BODY *************************/
 
 main {
@@ -76,12 +135,13 @@ h2 {
 }
 
 #introContainer img {
-  width: 650px;
+  /*width: 650px;*/
+  width: 43%;
   padding: 10px;
 }
 
 .buttonDiv button {
-  width: 438px;
+  width: 400px;
   font-size: 26px;
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
   font-weight: 900;
@@ -99,6 +159,26 @@ h2 {
   color: #444e5d;
 }
 
+@media screen and (max-width: 1100px) {
+  #introContainer img {
+    width: 80%;
+  }
+
+  .buttonDiv button {
+    width: 400px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  #introContainer img {
+    width: 90%;
+  }
+
+  .buttonDiv button {
+    width: 90%;
+  }
+}
+
 /**************************************************/
 /****************** MEET AHLAM ********************/
 
@@ -113,8 +193,14 @@ h2 {
   background-color: #ffffff;
 }
 
+#meetAhlam h2 {
+  margin-top: 50px;
+  margin-bottom: 30px;
+}
+
 .picIntro {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   gap: 10px;
   align-items: center;
@@ -144,20 +230,33 @@ h2 {
   /*white-space: pre-wrap; /* Preserve line breaks */
 }
 
+@media screen and (max-width: 800px) {
+  .picIntro img {
+    width: 80%;
+  }
+}
+
 /**************************************************/
 /****************** SOCIAL LOGOS ******************/
 .socialLogos {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   gap: 50px;
   /* margin: 25px 0;*/
-  padding: 20px 0;
+  padding: 20px;
   background-color: #ffffff;
   padding-bottom: 50px;
 }
 
 .socialLogos img {
   width: 4.5em;
+}
+
+@media screen and (max-width: 800px) {
+  .socialLogos img {
+    width: 3.5em;
+  }
 }
 
 /**************************************************/
@@ -206,11 +305,11 @@ h2 {
 }
 
 /*
-  .valuesh2,
-  .valuesP {
-    background-color: #ffffff;
-  }
-  */
+      .valuesh2,
+      .valuesP {
+        background-color: #ffffff;
+      }
+      */
 .valuesP {
   text-align: center;
   justify-content: center;
@@ -220,6 +319,7 @@ h2 {
 .valuesh2 {
   padding-top: 30px;
   color: #56572d;
+  padding-bottom: 25px;
 }
 
 .valuesP p {
@@ -256,6 +356,13 @@ h2 {
   margin-right: 25px;
 }
 
+@media screen and (max-width: 850px) {
+  .ahlamPics img {
+    height: auto;
+    width: 70%;
+  }
+}
+
 /**************************************************/
 /****************** BACKGROUND ********************/
 .background {
@@ -264,6 +371,8 @@ h2 {
 
 .background h2 {
   margin: 50px 0 0;
+  margin-top: 50px;
+  margin-bottom: 30px;
 }
 
 .backgroundP {
@@ -327,6 +436,18 @@ h2 {
   width: 600px;
 }
 
+@media screen and (max-width: 850px) {
+  .mediaDiv {
+    width: 100%;
+  }
+
+  .mediaDiv img,
+  .mediaDiv img:hover,
+  .mediaDiv p {
+    width: 95%;
+  }
+}
+
 /**************************************************/
 /********************** FORM **********************/
 .getInvolved {
@@ -336,11 +457,20 @@ h2 {
   background-color: #ffffff;
 }
 
+.getInvolved label p {
+  margin-bottom: 7px;
+}
+
+.getInvolved h2 {
+  margin: 50px 0 30px;
+}
+
 .getInvolved input,
 .getInvolved textarea {
   width: 550px;
   height: 28px;
   font-size: 20px;
+  margin-bottom: 20px;
 }
 
 .getInvolved textarea {
@@ -369,6 +499,14 @@ h2 {
   padding-bottom: 30px;
 }
 
+@media screen and (max-width: 850px) {
+  .getInvolved input,
+  .getInvolved textarea,
+  .getInvolved button {
+    width: 80%;
+  }
+}
+
 /**************************************************/
 /********************** FOOTER ********************/
 footer {
@@ -387,4 +525,24 @@ footer {
 .footer-right img {
   width: 4em;
   margin-left: 10px;
+}
+
+@media screen and (max-width: 850px) {
+  footer {
+    display: block;
+  }
+
+  .footer-right {
+    display: none;
+  }
+
+  footer {
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  h2 {
+    font-size: 35px;
+  }
 }
