@@ -304,6 +304,10 @@ h2 {
   line-height: 220%;
 }
 
+.keyissues b {
+  font-weight: 900;
+}
+
 /*
       .valuesh2,
       .valuesP {
@@ -331,6 +335,8 @@ h2 {
 /****************** ABOUT ME ********************/
 .about {
   text-align: center;
+  background-image: linear-gradient(to bottom, #c9b99f, #ffffff, #ffffff);
+  padding-bottom: 35px;
 }
 
 .about h2 {
@@ -383,9 +389,33 @@ h2 {
   text-align: start;
 }
 
+.backgroundP b {
+  font-weight: 900;
+  line-height: 120%;
+}
+
 .backgroundP p {
   width: 350px;
   font-size: 20px;
+}
+
+.background em {
+  font-style: italic;
+}
+
+.leadershipP p {
+  text-align: center;
+  font-size: 30px;
+  background: #ffffff;
+  padding: 10px;
+  border-radius: 5px;
+  font-weight: 900;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+
+.leadershipP img {
+  padding-top: 1.5em;
+  width: 50%;
 }
 
 /**************************************************/
