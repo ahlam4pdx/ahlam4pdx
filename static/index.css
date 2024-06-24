@@ -42,8 +42,8 @@ header li a {
 header li a:hover {
   background-color: #444e5d;
   color: #ffffff;
-  padding: 15px;
-  font-size: 25px;
+  padding: 10px 5px;
+  font-size: 20px;
   border-radius: 0.15em 0;
 }
 
@@ -141,7 +141,7 @@ h2 {
 }
 
 .buttonDiv button {
-  width: 400px;
+  width: 350px;
   font-size: 26px;
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
   font-weight: 900;
@@ -230,14 +230,33 @@ h2 {
   /*white-space: pre-wrap; /* Preserve line breaks */
 }
 
-@media screen and (max-width: 800px) {
-  .picIntro img {
+@media (max-width: 800px) {
+  .picIntro img,
+  .picIntro div {
     width: 80%;
+  }
+
+  .picIntro p {
+    font-size: 40px;
   }
 
   .introGoal {
     width: 85%;
     line-height: 125%;
+    font-size: 23px;
+  }
+}
+
+@media (max-width: 500px) {
+  .picIntro,
+  .picIntro div {
+    display: block;
+    text-align: center;
+  }
+
+  .picIntro img,
+  .picIntro p {
+    width: 300px;
   }
 }
 
@@ -313,12 +332,6 @@ h2 {
   font-weight: 900;
 }
 
-/*
-      .valuesh2,
-      .valuesP {
-        background-color: #ffffff;
-      }
-      */
 .valuesP {
   text-align: center;
   justify-content: center;
@@ -336,6 +349,12 @@ h2 {
   background-color: #56572d;
 }
 
+@media (max-width: 800px) {
+  .prioritiesP p {
+    font-size: 20px;
+  }
+}
+
 /**************************************************/
 /****************** ABOUT ME ********************/
 .about {
@@ -350,29 +369,41 @@ h2 {
 
 .aboutMeP {
   display: flex;
+  flex-direction: column;
   flex-wrap: wrap;
   gap: 75px;
-  justify-content: center;
   text-align: start;
+  align-items: center;
 }
 
 .aboutMeP p {
-  width: 350px;
-  font-size: 20px;
+  width: 65%;
+  font-size: 22px;
   font-family: Georgia, "Times New Roman", Times, serif;
   line-height: 120%;
 }
 
-.ahlamPics img {
-  padding: 35px 0;
-  height: 300px;
-  margin-right: 25px;
+.aboutMeP img {
+  width: 65%;
+}
+
+.familyP {
+  background-image: linear-gradient(to bottom, #c9b99f, #ffffff);
+  margin: 70px 0;
+  padding: 5px;
+  padding-bottom: 40px;
 }
 
 @media screen and (max-width: 850px) {
   .ahlamPics img {
     height: auto;
     width: 70%;
+  }
+}
+
+@media (max-width: 600px) {
+  .aboutMeP p {
+    font-size: 18px;
   }
 }
 
@@ -408,13 +439,17 @@ h2 {
   line-height: 120%;
 }
 
+.background p {
+  /*  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;*/
+}
+
 .background em {
   font-style: italic;
 }
 
 .leadershipP p {
   text-align: center;
-  font-size: 30px;
+  font-size: 25px;
   background: #ffffff;
   padding: 10px;
   border-radius: 5px;
@@ -424,7 +459,7 @@ h2 {
 
 .leadershipP img {
   padding-top: 1.5em;
-  width: 50%;
+  width: 40%;
 }
 
 /**************************************************/
@@ -453,7 +488,7 @@ h2 {
 
 .mediaDiv {
   display: block;
-  width: 600px;
+  width: 425px;
   margin-bottom: 50px;
   margin: 50px;
   text-decoration: none;
@@ -461,29 +496,45 @@ h2 {
 }
 
 .mediaDiv img {
-  width: 575px;
+  width: 400px;
   border-radius: 5px;
 }
 
 .mediaDiv p {
-  font-size: 35px;
+  font-size: 28px;
   font-family: Georgia, "Times New Roman", Times, serif;
-  width: 600px;
+  width: 400px;
+  margin-bottom: 12px;
+  text-align: start;
 }
 
 .mediaDiv img:hover {
-  width: 600px;
+  width: 415px;
 }
 
-@media screen and (max-width: 850px) {
-  .mediaDiv {
-    width: 100%;
-  }
-
+@media (max-width: 650px) {
+  .mediaDiv,
+  .mediaDiv p,
   .mediaDiv img,
-  .mediaDiv img:hover,
+  .mediaDiv img:hover {
+    width: 300px;
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 400px) {
+  .mediaDiv,
+  .mediaDiv p,
+  .mediaDiv img,
+  .mediaDiv img:hover {
+    width: 270px;
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 700px) {
   .mediaDiv p {
-    width: 95%;
+    font-size: 22px;
   }
 }
 
@@ -506,7 +557,7 @@ h2 {
 
 .getInvolved input,
 .getInvolved textarea {
-  width: 550px;
+  width: 500px;
   height: 28px;
   font-size: 20px;
   margin-bottom: 20px;
@@ -617,4 +668,9 @@ footer {
   h2 {
     font-size: 35px;
   }
+}
+
+*,
+.aboutMeP p {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
